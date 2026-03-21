@@ -1,2 +1,2 @@
-# sabotage
-Conheça o artista em um site feito para ele.
+# Sabotage
+Conheça Sabotage, um grandioso artista, em um site feito de um fã para outro.
