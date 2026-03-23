@@ -107,34 +107,49 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.08) 52%),
-    linear-gradient(rgba(3, 3, 3, 0.16), rgba(3, 3, 3, 0.66)),
-    url("../../imgs/sbta-3.webp");
+  background-image: url("../../imgs/sbta-5.webp");
   background-size: cover;
-  background-position: center 24%;
-  opacity: 0;
-  transform: scale(1.22);
-  filter: brightness(0.82) saturate(1.04) blur(2.6px);
-  animation: hero-bg-fade-in 1700ms cubic-bezier(0.16, 0.84, 0.22, 1) forwards;
+  background-position: center bottom;
+  opacity: 1;
+  transform: none;
+  filter: none;
+  animation: none;
   z-index: 0;
+  box-shadow: inset 0 0 90px rgba(255, 255, 255, 0.18);
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: #000000;
-  opacity: 0.72;
-  animation: hero-veil-out 1650ms cubic-bezier(0.16, 0.84, 0.22, 1) forwards;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0) 100%);
+  box-shadow:
+    0 0 8px rgba(255, 255, 255, 0.75),
+    0 0 18px rgba(255, 255, 255, 0.45);
+  transform: translateX(-160%);
+  animation: hero-neon-sweep 3.8s linear infinite;
   z-index: 1;
   pointer-events: none;
+}
+
+@keyframes hero-neon-sweep {
+  from {
+    transform: translateX(-125%);
+  }
+
+  to {
+    transform: translateX(125%);
+  }
 }
 
 @keyframes hero-bg-fade-in {
   0% {
     opacity: 0;
-    transform: scale(1.22);
+    transform: scale(-1.1, 1.1);
     filter: brightness(0.82) saturate(1.04) blur(2.6px);
   }
 
@@ -144,7 +159,7 @@ main {
 
   100% {
     opacity: 1;
-    transform: scale(1.17);
+    transform: scale(-1.05, 1.05);
     filter: brightness(1) saturate(1) blur(0);
   }
 }
@@ -180,7 +195,7 @@ h3 {
   opacity: 0;
   animation:
     logo-fade 1850ms cubic-bezier(0.16, 0.84, 0.22, 1) 120ms forwards,
-    logo-float 4.8s ease-in-out 2.2s infinite;
+    logo-float 4.8s ease-in-out 0s infinite;
 }
 
 @keyframes logo-fade {
@@ -219,7 +234,7 @@ h3 {
   font-family: "Sedgwick Ave Display", "Archivo Black", sans-serif;
   font-size: clamp(1.45rem, 2.9vw, 2.35rem);
   line-height: 0.95;
-  color: #f3f3f3;
+  color: #fffbe9;
   letter-spacing: 0.015em;
   white-space: nowrap;
   text-align: right;
@@ -232,7 +247,10 @@ h3 {
     1px -1px 0 #000000,
     -1px 1px 0 #000000,
     1px 1px 0 #000000,
-    0 0 8px rgba(0, 0, 0, 0.46);
+    0 1px 0 rgba(0, 0, 0, 0.55);
+  filter: saturate(1.22) contrast(1.2) brightness(1.08);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
   transform: translateY(-50%) rotate(-3.2deg);
   opacity: 0;
   isolation: isolate;
@@ -246,7 +264,7 @@ h3 {
   background:
     linear-gradient(150deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 42%),
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, rgba(0, 0, 0, 0.22) 1px 2px),
-    #060606;
+    #020202;
   box-shadow:
     0 9px 20px rgba(0, 0, 0, 0.52),
     8px 10px 0 rgba(220, 35, 43, 0.9),
@@ -261,7 +279,7 @@ h3 {
   inset: -0.22rem -0.48rem -0.2rem -0.38rem;
   background-image: radial-gradient(rgba(0, 0, 0, 0.38) 0.58px, transparent 0.65px);
   background-size: 3px 3px;
-  opacity: 0.42;
+  opacity: 0.16;
   mix-blend-mode: multiply;
   z-index: -1;
   pointer-events: none;
@@ -270,7 +288,16 @@ h3 {
 
 .hero-sticker .word-red,
 .hero-sticker .word-yellow {
-  color: #f12a34;
+  color: #ff2436;
+}
+
+.hero-sticker .w1,
+.hero-sticker .w4 {
+  color: #ffe86e;
+}
+
+.hero-sticker .w2 {
+  color: #fff8dd;
 }
 
 .hero-sticker span {
@@ -410,24 +437,65 @@ button {
 .feature {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   overflow: hidden;
+}
+
+.feature.panel {
+  width: 100%;
+  margin-left: 0;
+}
+
+.feature.reverse img {
+  order: 2;
+}
+
+.feature.reverse .feature-copy {
+  order: 1;
 }
 
 .feature img {
   width: 100%;
   height: 100%;
   min-height: 240px;
+  aspect-ratio: 1200 / 630;
   object-fit: cover;
+  border: 2px solid #000000;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.7);
+  filter: brightness(0.86);
+  transition: transform 420ms ease;
+}
+
+#musicas.feature img {
+  object-position: left center;
+}
+
+#biografia.feature img {
+  object-position: right center;
+}
+
+.feature:hover img {
+  transform: scale(1.045);
 }
 
 .feature-copy {
-  padding: 0.9rem;
-  background: var(--panel-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
+  text-align: center;
+  padding: clamp(1.5rem, 4.2vw, 3.2rem) clamp(2rem, 6vw, 4.4rem);
+  background:
+    linear-gradient(170deg, rgba(220, 35, 43, 0.09), rgba(220, 35, 43, 0) 58%),
+    #121212;
 }
 
 .feature-copy h2 {
-  margin-top: 0.2rem;
-  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  margin-top: 0.1rem;
+  max-width: 18ch;
+  font-size: clamp(1.35rem, 3.1vw, 2rem);
+  line-height: 1.1;
 }
 
 .feature-copy p,
@@ -437,9 +505,19 @@ button {
   line-height: 1.45;
 }
 
+.feature-copy p {
+  max-width: 36ch;
+  margin: 0;
+}
+
 .feature-copy ul {
-  margin: 0.5rem 0;
-  padding-left: 1rem;
+  margin: 0.3rem 0 0.15rem;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-copy li + li {
+  margin-top: 0.2rem;
 }
 
 .label {
@@ -453,29 +531,55 @@ button {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.55rem;
-  padding: 0.55rem;
+  gap: 0.9rem;
+  padding: 0.8rem;
 }
 
 .card {
+  position: relative;
   border: 1px solid var(--line);
-  background: var(--panel-soft);
+  border-radius: 12px;
+  overflow: hidden;
+  background:
+    linear-gradient(165deg, rgba(220, 35, 43, 0.08), rgba(220, 35, 43, 0) 55%),
+    #141414;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #dc232b, #ff5961);
+  opacity: 0.8;
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 215px;
   object-fit: cover;
   display: block;
 }
 
 .card div {
-  padding: 0.7rem;
+  padding: 1rem 0.95rem 1.2rem;
+  text-align: center;
 }
 
 .card h3 {
-  margin: 0.2rem 0 0.45rem;
-  font-size: 1rem;
+  margin: 0.18rem 0 0.42rem;
+  font-size: 1.08rem;
+  line-height: 1.15;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(220, 35, 43, 0.78);
+  box-shadow: 0 20px 36px rgba(0, 0, 0, 0.44);
 }
 
 .quote {
@@ -496,6 +600,9 @@ button {
   position: relative;
   padding: 1rem;
   overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(220, 35, 43, 0.56);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.38);
   background:
     radial-gradient(120% 120% at 100% 0%, rgba(220, 35, 43, 0.14) 0%, rgba(220, 35, 43, 0) 58%),
     linear-gradient(160deg, #101010 0%, #0b0b0b 100%);
@@ -512,6 +619,8 @@ button {
   margin-top: 0.7rem;
   padding: 0.45rem;
   border: 1px solid rgba(220, 35, 43, 0.42);
+  border-radius: 10px;
+  overflow: hidden;
   background:
     linear-gradient(140deg, rgba(220, 35, 43, 0.1), rgba(220, 35, 43, 0) 52%),
     rgba(8, 8, 8, 0.86);
