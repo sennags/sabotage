@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="spotify-client-id" content="">
   <title>Sabotage</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,13 +21,13 @@
   </header>
 
   <section class="hero" id="inicio">
-    <p class="hero-sticker">vim para <span class="word-red">sabotar</span> seu raciocionio</p>
-    <img class="hero-logo" src="imgs/sabotage.png" alt="SABOTAGE">
+    <p class="hero-sticker" aria-label="Vim pra sabotar seu raciocinio"><span class="w1">vim</span> <span class="w2">pra</span> <span class="word-red w3">SABOTAR</span> <span class="w4">seu</span> <span class="word-yellow w5">RACIOCINIO</span></p>
+    <img class="hero-logo" src="imgs/sabotage.webp" alt="SABOTAGE">
   </section>
 
   <main>
     <section id="musicas" class="feature panel">
-      <img src="imgs/sbta-1.jpg" alt="Sabotage em retrato artistico" loading="lazy" decoding="async">
+      <img src="imgs/sbta-1.webp" alt="Sabotage em retrato artistico" loading="lazy" decoding="async">
       <article class="feature-copy">
         <p class="label">Faixas em destaque</p>
         <h2>Som de rua com identidade propria</h2>
@@ -45,8 +44,8 @@
       </article>
     </section>
 
-    <section id="biografia" class="feature panel reverse">
-      <img src="imgs/sbta-draw.png" alt="Ilustracao de Sabotage" loading="lazy" decoding="async">
+    <section id="biografia" class="feature panel">
+      <img src="imgs/sbta-draw.webp" alt="Ilustracao de Sabotage" loading="lazy" decoding="async">
       <article class="feature-copy">
         <p class="label">Biografia</p>
         <h2>Uma carreira curta, impacto eterno</h2>
@@ -60,7 +59,7 @@
 
     <section id="curiosidades" class="cards panel">
       <article class="card">
-        <img src="imgs/sbta-2.jpg" alt="Sabotage em foto de arquivo" loading="lazy" decoding="async">
+          <img src="imgs/sbta-2.webp" alt="Sabotage em foto de arquivo" loading="lazy" decoding="async">
         <div>
           <p class="label">Curiosidades</p>
           <h3>Cinema e improviso</h3>
@@ -69,7 +68,7 @@
       </article>
 
       <article id="feats" class="card">
-        <img src="imgs/sbta-3.png" alt="Arte grafica de Sabotage" loading="lazy" decoding="async">
+          <img src="imgs/sbta-3.webp" alt="Arte grafica de Sabotage" loading="lazy" decoding="async">
         <div>
           <p class="label">Feats</p>
           <h3>Colaboracoes de peso</h3>
@@ -81,7 +80,7 @@
       </article>
 
       <article class="card">
-        <img src="imgs/sbta-4.jpg" alt="Sabotage em performance" loading="lazy" decoding="async">
+          <img src="imgs/sbta-4.webp" alt="Sabotage em performance" loading="lazy" decoding="async">
         <div>
           <p class="label">Discografia</p>
           <h3>Rap é Compromisso! (2000)</h3>
@@ -97,33 +96,14 @@
     <section id="spotify" class="panel spotify">
       <div class="spotify-head">
         <p class="label">Spotify</p>
-        <h2>Pagina oficial e buscas no Spotify</h2>
+        <h2>Pagina oficial do Sabotage no Spotify</h2>
       </div>
 
-      <div class="spotify-artist-panel">
-        <p>Acesse a pagina oficial do Sabotage no Spotify:</p>
-        <a class="btn" href="https://open.spotify.com/search/Sabotage" target="_blank" rel="noopener noreferrer">Abrir pagina do artista</a>
-      </div>
-
-      <form id="spotify-search" class="search-row">
-        <input
-          type="text"
-          id="query"
-          name="query"
-          placeholder="Buscar no Spotify (ex: Sabotage Rap e Compromisso)"
-          required
-        >
-        <button type="submit">Buscar</button>
-      </form>
-
-      <p id="spotify-status" class="spotify-status" aria-live="polite"></p>
-
-      <section id="spotify-results" class="spotify-results" aria-label="Resultados da busca"></section>
-
-      <div class="embed-grid">
+      <div class="spotify-frame">
         <iframe
-          title="Sabotage no Spotify"
-          src="https://open.spotify.com/embed/artist/2qP7ZkAQ57K5vereZQKybT?utm_source=generator"
+          class="spotify-embed"
+          title="Pagina do Sabotage no Spotify"
+          src="https://open.spotify.com/embed/artist/5deK5HnwbEKvge2svL0i0B?utm_source=generator"
           loading="lazy"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         ></iframe>
