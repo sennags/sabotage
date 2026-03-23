@@ -1,0 +1,3 @@
+É um site sobre o artista brasileiro Sabotage. Tenho em mente de fazer um portal que envolva tudo dele, músicas, biografia, curiosidades e feats. 
+
+Com funcionalidades envolvendo o spotify.

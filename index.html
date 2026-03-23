@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="spotify-client-id" content="">
+  <title>Sabotage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Sedgwick+Ave+Display&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="topbar" aria-label="Navegacao fixa">
+    <a class="topbar-brand" href="#inicio">SABOTAGE</a>
+    <nav class="topbar-links" aria-label="Secoes">
+      <a href="#biografia">Biografia</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#feats">Feats</a>
+      <a href="#spotify">Spotify</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <p class="hero-sticker">vim para <span class="word-red">sabotar</span> seu raciocionio</p>
+    <img class="hero-logo" src="imgs/sabotage.png" alt="SABOTAGE">
+  </section>
+
+  <main>
+    <section id="musicas" class="feature panel">
+      <img src="imgs/sbta-1.jpg" alt="Sabotage em retrato artistico" loading="lazy" decoding="async">
+      <article class="feature-copy">
+        <p class="label">Faixas em destaque</p>
+        <h2>Som de rua com identidade propria</h2>
+        <ul>
+          <li>Rap e Compromisso</li>
+          <li>Um Bom Lugar</li>
+          <li>No Brooklin</li>
+          <li>Respeito e pra Quem Tem</li>
+        </ul>
+        <p>
+          Letras de sobrevivencia, consciencia e atitude que marcaram para sempre
+          o rap brasileiro.
+        </p>
+      </article>
+    </section>
+
+    <section id="biografia" class="feature panel reverse">
+      <img src="imgs/sbta-draw.png" alt="Ilustracao de Sabotage" loading="lazy" decoding="async">
+      <article class="feature-copy">
+        <p class="label">Biografia</p>
+        <h2>Uma carreira curta, impacto eterno</h2>
+        <p>
+          Mauro Mateus dos Santos transformou vivencia em arte com flow unico,
+          poesia afiada e forte ligacao com a periferia. Seu legado segue vivo e
+          inspira geracoes na musica brasileira.
+        </p>
+      </article>
+    </section>
+
+    <section id="curiosidades" class="cards panel">
+      <article class="card">
+        <img src="imgs/sbta-2.jpg" alt="Sabotage em foto de arquivo" loading="lazy" decoding="async">
+        <div>
+          <p class="label">Curiosidades</p>
+          <h3>Cinema e improviso</h3>
+          <p>Atuou no cinema nacional e era conhecido por improvisacoes rapidas.</p>
+        </div>
+      </article>
+
+      <article id="feats" class="card">
+        <img src="imgs/sbta-3.png" alt="Arte grafica de Sabotage" loading="lazy" decoding="async">
+        <div>
+          <p class="label">Feats</p>
+          <h3>Colaboracoes de peso</h3>
+          <p>
+            Participacoes com artistas relevantes da cena, elevando cada faixa
+            com autenticidade e presenca.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="imgs/sbta-4.jpg" alt="Sabotage em performance" loading="lazy" decoding="async">
+        <div>
+          <p class="label">Discografia</p>
+          <h3>Rap é Compromisso! (2000)</h3>
+          <p>Album classico e referencia obrigatoria no hip hop nacional.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="quote panel">
+      <p>"Seu compromisso com o mundo nunca sera esquecido."</p>
+    </section>
+
+    <section id="spotify" class="panel spotify">
+      <div class="spotify-head">
+        <p class="label">Spotify</p>
+        <h2>Pagina oficial e buscas no Spotify</h2>
+      </div>
+
+      <div class="spotify-artist-panel">
+        <p>Acesse a pagina oficial do Sabotage no Spotify:</p>
+        <a class="btn" href="https://open.spotify.com/search/Sabotage" target="_blank" rel="noopener noreferrer">Abrir pagina do artista</a>
+      </div>
+
+      <form id="spotify-search" class="search-row">
+        <input
+          type="text"
+          id="query"
+          name="query"
+          placeholder="Buscar no Spotify (ex: Sabotage Rap e Compromisso)"
+          required
+        >
+        <button type="submit">Buscar</button>
+      </form>
+
+      <p id="spotify-status" class="spotify-status" aria-live="polite"></p>
+
+      <section id="spotify-results" class="spotify-results" aria-label="Resultados da busca"></section>
+
+      <div class="embed-grid">
+        <iframe
+          title="Sabotage no Spotify"
+          src="https://open.spotify.com/embed/artist/2qP7ZkAQ57K5vereZQKybT?utm_source=generator"
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
