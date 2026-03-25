@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biografia | Sabotage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070707;
+      --panel: #0f0f0f;
+      --line: rgba(220, 35, 43, 0.5);
+      --text-main: #f3f3f3;
+      --text-soft: #cfcfcf;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: "Space Grotesk", sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
+
+    .bio-page {
+      width: min(900px, 100%);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      display: grid;
+      gap: 1rem;
+      padding: clamp(1rem, 3vw, 2rem);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Archivo Black", sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: 0.03em;
+    }
+
+    p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    a {
+      justify-self: start;
+      text-decoration: none;
+      color: var(--text-main);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      padding: 0.5rem 0.8rem;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+  <article class="bio-page">
+    <h1>Biografia</h1>
+    <p>
+      Mauro Matheus dos Santos, conhecido como Sabotage, foi um dos nomes mais marcantes do rap
+      nacional. Sua arte nasceu da vivencia na periferia e ganhou forca por letras sinceras,
+      ritmo singular e uma identidade que atravessa geracoes.
+    </p>
+    <p>
+      Mesmo com uma carreira curta, sua obra permanece como referencia no hip hop brasileiro,
+      influenciando artistas e fortalecendo um legado cultural que segue vivo.
+    </p>
+    <a href="index.html#biografia">Voltar ao portal</a>
+  </article>
+</body>
+</html>
