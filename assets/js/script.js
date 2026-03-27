@@ -2,6 +2,7 @@ const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const revealItems = document.querySelectorAll(".reveal");
+const mobileMenuBreakpoint = 860;
 
 if (header) {
   const syncHeader = () => {
@@ -14,6 +15,7 @@ if (header) {
 
 if (menuToggle && header && siteNav) {
   const navLinks = siteNav.querySelectorAll("a");
+  const isMobileMenu = () => window.innerWidth <= mobileMenuBreakpoint;
 
   const setMenuState = (isOpen) => {
     header.classList.toggle("is-open", isOpen);
@@ -28,14 +30,14 @@ if (menuToggle && header && siteNav) {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      if (window.innerWidth <= 860) {
+      if (isMobileMenu()) {
         setMenuState(false);
       }
     });
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 860) {
+    if (!isMobileMenu()) {
       setMenuState(false);
     }
   });

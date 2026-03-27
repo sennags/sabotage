@@ -193,7 +193,6 @@ main {
 }
 
 .hero-copy,
-.hero-aside,
 .section,
 .timeline-item,
 .mini-card,
@@ -262,27 +261,6 @@ main {
 .site-nav a:hover,
 .site-nav a:focus-visible {
   transform: translateY(-2px);
-}
-
-.hero-aside {
-  display: inline-grid;
-  justify-self: end;
-  align-self: center;
-  place-items: center;
-  width: fit-content;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.hero-album {
-  display: block;
-  width: min(100%, 360px);
-  border-radius: 24px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
-  object-fit: cover;
 }
 
 .section {
@@ -581,7 +559,6 @@ main {
   .hero-backdrop,
   .section,
   .hero-copy,
-  .hero-aside,
   .intro-card,
   .timeline-item,
   .mini-card,
@@ -596,7 +573,6 @@ main {
   }
 
   .hero-copy,
-  .hero-aside,
   .section,
   .statement-card,
   .stats-card,

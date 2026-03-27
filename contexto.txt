@@ -1,19 +1,19 @@
 Projeto: site tributo ao Sabotage.
 
-Atualizacao mais recente:
+Atualização mais recente:
 - Redesign completo do layout em `index.html`, com visual mais atual e mais alinhado ao artista.
-- Nova hierarquia de secoes: hero, legado, trajetoria, discografia/destaques, impacto cultural e Spotify.
-- Responsividade mobile reforcada com menu hamburguer, reorganizacao de grids, ajustes de espacamento e CTAs em coluna.
-- Atualizacao da pagina `biografia.html` para manter a mesma linguagem visual do restante do site.
-- Interacoes em `assets/js/script.js`: header reativo no scroll, menu mobile e animacoes leves de entrada.
+- Nova hierarquia de seções: hero, legado, trajetória, discografia/destaques, impacto cultural e Spotify.
+- Responsividade mobile reforçada com menu hambúrguer, reorganização de grids, ajustes de espaçamento e CTAs em coluna.
+- Atualização da página `biografia.html` para manter a mesma linguagem visual do restante do site.
+- Interações em `assets/js/script.js`: header reativo no scroll, menu mobile e animações leves de entrada.
 
-Direcao visual atual:
-- Linguagem editorial e cinematografica.
+Direção visual atual:
+- Linguagem editorial e cinematográfica.
 - Tons quentes, contrastes fortes e atmosfera urbana.
-- Tipografia expressiva para titulos e leitura mais limpa no corpo.
+- Tipografia expressiva para títulos e leitura mais limpa no corpo.
 
-Fluxo combinado para proximas modificacoes:
-- Sempre que houver modificacao, criar uma branch com nome curto e descritivo da mudanca.
-- Depois, registrar commit com breve explicacao do motivo da alteracao.
+Fluxo combinado para próximas modificações:
+- Sempre que houver modificação, criar uma branch com nome curto e descritivo da mudança.
+- Depois, registrar commit com breve explicação do motivo da alteração.
 - Em seguida, fazer push e abrir pull request.
-- Excecao: se a mudanca for apenas de frontend visual (interacao, animacao, design ou layout), perguntar antes se o usuario quer commit, push e pull request.
+- Exceção: se a mudança for apenas de frontend visual (interação, animação, design ou layout), perguntar antes se o usuário quer commit, push e pull request.
