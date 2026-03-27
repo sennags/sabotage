@@ -3,122 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sabotage</title>
+  <title>Sabotage | Legado Vivo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="topbar" aria-label="Navegação fixa">
-    <a class="topbar-brand" href="#inicio">SABOTAGE</a>
-    <nav class="topbar-links" aria-label="Seções">
-      <a href="#biografia">Biografia</a>
-      <a href="#curiosidades">Curiosidades</a>
-      <a href="#feats">Feats</a>
+  <header class="site-header" id="topo">
+    <a class="brand" href="#inicio" aria-label="Ir para o inicio">Sabotage</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" id="site-menu" aria-label="Navegacao principal">
+      <a href="#legado">Legado</a>
+      <a href="#trajetoria">Trajetoria</a>
+      <a href="#discografia">Discografia</a>
+      <a href="#cultura">Cultura</a>
       <a href="#spotify">Spotify</a>
     </nav>
   </header>
 
-  <section class="hero" id="inicio">
-    <div class="hero-copy">
-      <p class="hero-kicker">Brooklin · São Paulo · Rap e compromisso</p>
-      <h1 class="hero-title">Poeta da rua, voz eterna da periferia.</h1>
-      <p class="hero-lead">
-        Mauro Mateus dos Santos transformou vivência em manifesto. Flow cortante,
-        cinema, quebrada e consciência social em uma presença que ainda pulsa no rap brasileiro.
-      </p>
-      <div class="hero-tags" aria-label="Marcas do legado">
-        <span>Rap nacional</span>
-        <span>Cinema</span>
-        <span>Periferia</span>
-        <span>Legado</span>
-      </div>
-    </div>
-    <div class="hero-meta" aria-label="Contexto visual">
-      <span>1973</span>
-      <span>2003</span>
-      <span>Brooklin</span>
-    </div>
-    <img class="hero-logo" src="imgs/sabotage.webp" alt="SABOTAGE">
-  </section>
-
   <main>
-    <div class="feature-sections">
-      <section id="musicas" class="feature panel">
-        <img src="imgs/sbta-1.webp" alt="Sabotage em retrato artístico" loading="lazy" decoding="async">
-        <div class="feature-copy">
-          <p class="label">Faixas em destaque</p>
-          <h2>Som de rua com identidade própria</h2>
-          <ul>
-            <li>Rap e Compromisso</li>
-            <li>Um Bom Lugar</li>
-            <li>No Brooklin</li>
-            <li>Respeito é pra Quem Tem</li>
-          </ul>
-          <p>
-            Letras de sobrevivência, consciência e atitude que marcaram para sempre
-            o rap brasileiro.
+    <section class="hero" id="inicio">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Brooklin, Sao Paulo - rap, cinema e consciencia</p>
+          <h1>Uma presenca que ainda dita o tom da rua.</h1>
+          <p class="hero-text">
+            Sabotage segue atual porque nunca soou artificial. Sua voz, sua historia e seu olhar
+            sobre a periferia continuam influenciando a musica, a moda, o audiovisual e a cultura urbana.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#legado">Explorar legado</a>
+            <a class="button button-secondary" href="biografia.html">Ler biografia</a>
+          </div>
+        </div>
+
+        <div class="hero-aside reveal">
+          <div class="hero-badge">
+            <span>1973</span>
+            <span>2003</span>
+            <span>Rap nacional</span>
+          </div>
+          <img class="hero-mark" src="imgs/sabotage.webp" alt="Logotipo Sabotage">
+          <p class="hero-note">
+            "Rap e compromisso" nao virou so album: virou assinatura de postura, verdade e impacto cultural.
           </p>
         </div>
-      </section>
-
-      <section id="biografia" class="feature panel">
-        <div class="feature-copy">
-          <p class="label">Biografia</p>
-          <h2>Uma carreira curta, impacto eterno</h2>
-          <p>
-            Mauro Mateus dos Santos transformou vivência em arte com flow único,
-            poesia afiada e forte ligação com a periferia. Seu legado segue vivo e
-            inspira gerações na música brasileira.
-          </p>
-        </div>
-        <img src="imgs/sbta-6.webp" alt="Ilustração de Sabotage" loading="lazy" decoding="async">
-      </section>
-    </div>
-
-    <section id="curiosidades" class="cards panel">
-      <article class="card">
-          <img src="imgs/sbta-2.webp" alt="Sabotage em foto de arquivo" loading="lazy" decoding="async">
-        <div>
-          <p class="label">Curiosidades</p>
-          <h3>Cinema e improviso</h3>
-          <p>Atuou no cinema nacional e era conhecido por improvisações rápidas.</p>
-        </div>
-      </article>
-
-      <article id="feats" class="card">
-          <img src="imgs/sbta-3.webp" alt="Arte gráfica de Sabotage" loading="lazy" decoding="async">
-        <div>
-          <p class="label">Feats</p>
-          <h3>Colaborações de peso</h3>
-          <p>
-            Participações com artistas relevantes da cena, elevando cada faixa
-            com autenticidade e presença.
-          </p>
-        </div>
-      </article>
-
-      <article class="card">
-          <img src="imgs/sbta-4.webp" alt="Sabotage em performance" loading="lazy" decoding="async">
-        <div>
-          <p class="label">Discografia</p>
-          <h3>Rap é Compromisso! (2000)</h3>
-          <p>Álbum clássico e referência obrigatória no hip hop nacional.</p>
-        </div>
-      </article>
+      </div>
     </section>
 
-    <section id="spotify" class="panel spotify">
-      <div class="spotify-head">
-        <p class="label">Spotify</p>
-        <h2>Página oficial do Sabotage no Spotify</h2>
+    <section class="section intro reveal" id="legado">
+      <div class="section-heading">
+        <p class="eyebrow">Legado</p>
+        <h2>Uma identidade forte, cinematografica e impossivel de confundir.</h2>
       </div>
 
-      <div class="spotify-frame">
+      <div class="intro-grid">
+        <article class="intro-card statement-card">
+          <p>
+            Sabotage uniu lirica afiada, carisma raro e uma estetica que nasceu da vivencia.
+            Seu trabalho transformou experiencia real em arte popular, sem perder peso nem humanidade.
+          </p>
+        </article>
+
+        <article class="intro-card image-card">
+          <img src="imgs/sbta-1.webp" alt="Retrato artistico de Sabotage" loading="lazy" decoding="async">
+        </article>
+
+        <article class="intro-card stats-card">
+          <div>
+            <strong>01</strong>
+            <span>album classico que virou referencia definitiva no hip hop brasileiro.</span>
+          </div>
+          <div>
+            <strong>02</strong>
+            <span>linguagens dominadas com naturalidade: musica e cinema.</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>autenticidade na forma de contar a quebrada sem filtro.</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="trajetoria">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Trajetoria</p>
+        <h2>Uma caminhada curta no tempo e gigante em influencia.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span class="timeline-year">Anos 90</span>
+          <div>
+            <h3>Voz moldada na rua</h3>
+            <p>A vivencia no Brooklin atravessa o jeito de escrever, rimar e se posicionar.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <span class="timeline-year">2000</span>
+          <div>
+            <h3>"Rap e Compromisso!" entra para a historia</h3>
+            <p>O disco consolida um som cru, sofisticado e profundamente brasileiro.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <span class="timeline-year">Cinema</span>
+          <div>
+            <h3>Presenca magnetica nas telas</h3>
+            <p>Seu carisma natural expande a imagem do artista para alem da musica.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <span class="timeline-year">Hoje</span>
+          <div>
+            <h3>Influencia viva</h3>
+            <p>Continua inspirando novas geracoes de MCs, produtores, designers e cineastas.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section works" id="discografia">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Discografia e destaques</p>
+        <h2>Faixas e momentos que sustentam o tamanho do legado.</h2>
+      </div>
+
+      <div class="works-grid">
+        <article class="work-feature reveal">
+          <img src="imgs/sbta-6.webp" alt="Ilustracao de Sabotage" loading="lazy" decoding="async">
+          <div class="work-copy">
+            <p class="eyebrow">Album essencial</p>
+            <h3>Rap e Compromisso! (2000)</h3>
+            <p>
+              Um classico absoluto: mistura flow singular, narrativa social, humor, tensao e humanidade
+              em um recorte unico do rap brasileiro.
+            </p>
+          </div>
+        </article>
+
+        <article class="mini-card reveal">
+          <img src="imgs/sbta-2.webp" alt="Sabotage em foto de arquivo" loading="lazy" decoding="async">
+          <div>
+            <p class="eyebrow">Faixas</p>
+            <h3>Um Bom Lugar</h3>
+            <p>Visao afetiva e potente sobre territorio, sobrevivencia e sonho.</p>
+          </div>
+        </article>
+
+        <article class="mini-card reveal">
+          <img src="imgs/sbta-3.webp" alt="Arte grafica de Sabotage" loading="lazy" decoding="async">
+          <div>
+            <p class="eyebrow">Faixas</p>
+            <h3>No Brooklin</h3>
+            <p>Retrato direto da quebrada com vocabulario, ritmo e personalidade proprios.</p>
+          </div>
+        </article>
+
+        <article class="mini-card reveal">
+          <img src="imgs/sbta-4.webp" alt="Sabotage em performance" loading="lazy" decoding="async">
+          <div>
+            <p class="eyebrow">Feats</p>
+            <h3>Colaboracoes marcantes</h3>
+            <p>Participacoes que elevavam qualquer som pela presenca vocal e pela identidade imediata.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section culture" id="cultura">
+      <div class="culture-grid">
+        <article class="culture-panel quote-panel reveal">
+          <p class="eyebrow">Impacto cultural</p>
+          <h2>Mais que rapper: simbolo de imaginario, linguagem e atitude.</h2>
+          <p>
+            Sabotage permanece relevante porque representa uma verdade estetica e humana.
+            Sua imagem continua forte em editoriais, documentarios, playlists, murais e referencias visuais da cultura urbana.
+          </p>
+        </article>
+
+        <article class="culture-panel gallery-panel reveal">
+          <img src="imgs/sbta-5.webp" alt="Retrato artistico em alto contraste" loading="lazy" decoding="async">
+          <img src="imgs/sbta-draw.webp" alt="Ilustracao de Sabotage em desenho" loading="lazy" decoding="async">
+        </article>
+      </div>
+    </section>
+
+    <section class="section spotify-section reveal" id="spotify">
+      <div class="section-heading">
+        <p class="eyebrow">Spotify</p>
+        <h2>Ouvir Sabotage hoje ainda soa urgente.</h2>
+      </div>
+
+      <div class="spotify-shell">
         <iframe
           class="spotify-embed"
-          title="Página do Sabotage no Spotify"
+          title="Pagina oficial do Sabotage no Spotify"
           src="https://open.spotify.com/embed/artist/5deK5HnwbEKvge2svL0i0B?utm_source=generator"
           loading="lazy"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

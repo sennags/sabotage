@@ -1,28 +1,63 @@
-const topbar = document.querySelector(".topbar");
-const hero = document.getElementById("inicio");
+const header = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
+const revealItems = document.querySelectorAll(".reveal");
 
-if (topbar && hero) {
-  const setTopbarVisibility = (isVisible) => {
-    topbar.classList.toggle("is-visible", isVisible);
+if (header) {
+  const syncHeader = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
   };
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setTopbarVisibility(!entry.isIntersecting);
-      },
-      { threshold: 0 }
-    );
+  syncHeader();
+  window.addEventListener("scroll", syncHeader, { passive: true });
+}
 
-    observer.observe(hero);
-  } else {
-    const toggleTopbar = () => {
-      const heroBottom = hero.getBoundingClientRect().bottom;
-      setTopbarVisibility(heroBottom <= 0);
-    };
+if (menuToggle && header && siteNav) {
+  const navLinks = siteNav.querySelectorAll("a");
 
-    toggleTopbar();
-    window.addEventListener("scroll", toggleTopbar, { passive: true });
-    window.addEventListener("resize", toggleTopbar, { passive: true });
-  }
+  const setMenuState = (isOpen) => {
+    header.classList.toggle("is-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+  };
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    setMenuState(!isOpen);
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 860) {
+        setMenuState(false);
+      }
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) {
+      setMenuState(false);
+    }
+  });
+}
+
+if ("IntersectionObserver" in window && revealItems.length > 0) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
 }
