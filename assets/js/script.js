@@ -61,3 +61,45 @@ if ("IntersectionObserver" in window && revealItems.length > 0) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+const soundcloudEmbeds = document.querySelectorAll("[data-soundcloud-embed]");
+
+soundcloudEmbeds.forEach((wrapper) => {
+  const iframe = wrapper.querySelector("iframe");
+  const fallback = wrapper.querySelector(".soundcloud-fallback");
+
+  if (!iframe || !fallback) {
+    return;
+  }
+
+  let settled = false;
+  const markFailed = () => {
+    if (settled) {
+      return;
+    }
+    settled = true;
+    wrapper.classList.add("is-failed");
+    fallback.hidden = false;
+  };
+
+  const markLoaded = () => {
+    if (settled) {
+      return;
+    }
+    settled = true;
+    wrapper.classList.add("is-loaded");
+    fallback.hidden = true;
+  };
+
+  const timeout = window.setTimeout(markFailed, 6000);
+
+  iframe.addEventListener("load", () => {
+    window.clearTimeout(timeout);
+    markLoaded();
+  });
+
+  iframe.addEventListener("error", () => {
+    window.clearTimeout(timeout);
+    markFailed();
+  });
+});

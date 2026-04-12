@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundCloud | Sabotage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/soundcloud.css">
+</head>
+<body class="soundcloud-page">
+  <header class="site-header" id="topo">
+    <a class="brand" href="../index.html" aria-label="Ir para o inicio">Sabotage</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" id="site-menu" aria-label="Navegacao principal">
+      <a href="../index.html">Home</a>
+      <a href="biografia.html">Biografia</a>
+      <a href="../index.html#discografia">Discografia</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section soundcloud-hero" id="inicio">
+      <div class="soundcloud-hero-grid reveal">
+        <div class="soundcloud-hero-copy">
+          <p class="eyebrow">SoundCloud</p>
+          <h1>Uma pagina de escuta para deixar o som respirar.</h1>
+          <p>
+            O SoundCloud assume o centro da experiencia com uma interface mais densa, escura e direta.
+            O texto entra so para preparar o ouvido; o resto e presenca, clima e continuidade.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#player">Abrir player</a>
+            <a class="button button-secondary" href="../index.html#legado">Voltar ao legado</a>
+          </div>
+        </div>
+        <div class="soundcloud-hero-art" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section soundcloud-player-section" id="player">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Player protagonista</p>
+        <h2>O widget fica na frente. O resto da pagina so acompanha.</h2>
+      </div>
+      <div class="soundcloud-player reveal" data-soundcloud-embed>
+        <iframe
+          class="soundcloud-embed"
+          title="SoundCloud de Sabotage"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/sabotage&color=%23ff7a1a&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"
+          loading="lazy"
+          allow="autoplay"
+        ></iframe>
+        <div class="soundcloud-fallback" hidden>
+          <div>
+            <h3>Embed indisponivel</h3>
+            <p>O player nao carregou aqui. Continue a escuta direto no perfil do SoundCloud.</p>
+          </div>
+          <a class="button button-secondary" href="https://soundcloud.com/sabotage" target="_blank" rel="noopener">Abrir no SoundCloud</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soundcloud-editorial" id="editorial">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Editorial</p>
+        <h2>Contexto minimo para uma voz que nunca precisou de excesso.</h2>
+      </div>
+      <p>
+        A obra de Sabotage segue acesa porque nunca dependeu de pose. Cada entrada vocal traz rua,
+        tensao, humor e observacao fina em uma medida dificil de repetir.
+      </p>
+      <p>
+        Por isso esta pagina segura o texto no minimo: a funcao dela nao e competir com a musica,
+        mas criar um enquadramento a altura antes do play.
+      </p>
+    </section>
+
+    <section class="section" id="continuar">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Continuar no site</p>
+        <h2>Navegacao direta para seguir explorando.</h2>
+      </div>
+      <div class="soundcloud-links reveal">
+        <a class="soundcloud-link" href="../index.html">
+          <span>Home</span>
+          <h3>Voltar ao inicio</h3>
+          <p>Revisite a visao geral do legado e os destaques principais.</p>
+        </a>
+        <a class="soundcloud-link" href="biografia.html">
+          <span>Biografia</span>
+          <h3>Conhecer a historia</h3>
+          <p>Leia a trajetoria com foco em vivencia, cultura e impacto.</p>
+        </a>
+        <a class="soundcloud-link" href="../index.html#discografia">
+          <span>Discografia</span>
+          <h3>Ver faixas e discos</h3>
+          <p>Explore as musicas essenciais e os momentos-chave.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
