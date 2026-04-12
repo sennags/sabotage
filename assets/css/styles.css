@@ -459,19 +459,59 @@ main {
   padding: 0.4rem;
 }
 
-.spotify-shell {
+.listen-shell {
   padding: 0.55rem;
   border: 1px solid var(--line-strong);
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255, 122, 26, 0.08), rgba(0, 0, 0, 0));
 }
 
-.spotify-embed {
-  display: block;
-  width: 100%;
-  min-height: 430px;
-  border: 0;
-  border-radius: 18px;
+.listen-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 1rem;
+}
+
+.listen-copy,
+.listen-card {
+  min-height: 100%;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+}
+
+.listen-copy {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+}
+
+.listen-copy p,
+.listen-card h3 {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.8;
+}
+
+.listen-card {
+  align-content: end;
+  background:
+    linear-gradient(180deg, rgba(7, 6, 5, 0.2), rgba(7, 6, 5, 0.78)),
+    url("../../imgs/sbta-5.webp") center center / cover no-repeat;
+}
+
+.listen-card span {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.listen-card h3 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 0.95;
 }
 
 .reveal {
@@ -489,7 +529,8 @@ main {
   .intro-grid,
   .works-grid,
   .timeline,
-  .culture-grid {
+  .culture-grid,
+  .listen-shell {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -557,7 +598,8 @@ main {
   .works-grid,
   .timeline,
   .culture-grid,
-  .gallery-panel {
+  .gallery-panel,
+  .listen-shell {
     grid-template-columns: 1fr;
   }
 
@@ -588,7 +630,9 @@ main {
   .mini-card,
   .work-feature,
   .culture-panel,
-  .spotify-shell {
+  .listen-shell,
+  .listen-copy,
+  .listen-card {
     border-radius: 22px;
   }
 
@@ -626,9 +670,6 @@ main {
     font-size: 1.45rem;
   }
 
-  .spotify-embed {
-    min-height: 380px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
