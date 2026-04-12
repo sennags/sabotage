@@ -261,7 +261,8 @@
 .soundcloud-embed {
   display: block;
   width: 100%;
-  min-height: clamp(380px, 62vw, 700px);
+  height: 420px;
+  min-height: 420px;
   border: 0;
   border-radius: 22px;
 }
@@ -293,7 +294,8 @@
   }
 
   .soundcloud-embed {
-    min-height: clamp(360px, 70vw, 620px);
+    height: 420px;
+    min-height: 420px;
   }
 }
 
@@ -313,7 +315,8 @@
   }
 
   .soundcloud-embed {
-    min-height: clamp(320px, 82vw, 520px);
+    height: 400px;
+    min-height: 400px;
   }
 }
 
@@ -336,6 +339,7 @@
   }
 
   .soundcloud-embed {
-    min-height: clamp(280px, 88vw, 420px);
+    height: 380px;
+    min-height: 380px;
   }
 }
