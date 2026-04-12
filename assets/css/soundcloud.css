@@ -95,14 +95,15 @@
 
 .soundcloud-now-playing {
   display: grid;
-  align-content: start;
+  grid-template-columns: 220px minmax(0, 1fr) auto;
+  align-items: center;
   gap: 1rem;
   padding: clamp(1rem, 2vw, 1.4rem);
 }
 
 .soundcloud-cover {
   min-height: 0;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   background:
@@ -135,13 +136,14 @@
 .soundcloud-track-copy h2 {
   font-size: clamp(2.1rem, 4vw, 3.4rem);
   line-height: 0.92;
-  max-width: 12ch;
+  max-width: 9ch;
 }
 
 .soundcloud-quick-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  justify-content: flex-end;
 }
 
 .soundcloud-quick-actions .button {
@@ -215,12 +217,20 @@
 }
 
 @media (max-width: 1100px) {
-  .soundcloud-player-shell {
-    width: 100%;
+  .soundcloud-player-shell { width: 100%; }
+
+  .soundcloud-now-playing {
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: end;
+  }
+
+  .soundcloud-quick-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
   }
 
   .soundcloud-cover {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1 / 1;
   }
 
   .soundcloud-embed {
@@ -237,6 +247,11 @@
 
   .soundcloud-page main {
     width: calc(100% - 2rem);
+  }
+
+  .soundcloud-now-playing {
+    grid-template-columns: 1fr;
+    align-items: start;
   }
 
   .soundcloud-console-top {
@@ -265,7 +280,7 @@
   }
 
   .soundcloud-cover {
-    aspect-ratio: 5 / 4;
+    aspect-ratio: 4 / 3;
   }
 
   .soundcloud-embed {
