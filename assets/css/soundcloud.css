@@ -165,25 +165,6 @@
   line-height: 1.75;
 }
 
-.soundcloud-meta-list {
-  display: grid;
-  gap: 0.65rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.soundcloud-meta-list li {
-  padding: 0.85rem 1rem;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--text-main);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .soundcloud-quick-actions {
   display: flex;
   flex-wrap: wrap;
