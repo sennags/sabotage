@@ -102,7 +102,7 @@
   border-radius: 28px;
 }
 
-.soundcloud-now-playing,
+.soundcloud-now-playing {
   border: 1px solid rgba(255, 255, 255, 0.05);
   background: linear-gradient(180deg, rgba(31, 24, 19, 0.98), rgba(18, 14, 11, 0.98));
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
@@ -132,9 +132,7 @@
 }
 
 .soundcloud-kicker,
-.soundcloud-console-label,
-.soundcloud-support-card span,
-.soundcloud-link span {
+.soundcloud-console-label {
   display: inline-flex;
   width: fit-content;
   color: var(--accent-strong);
@@ -151,9 +149,7 @@
 }
 
 .soundcloud-track-copy h2,
-.soundcloud-console-top h3,
-.soundcloud-support-card h3,
-.soundcloud-link h3 {
+.soundcloud-console-top h3 {
   margin: 0;
 }
 
@@ -163,8 +159,7 @@
 }
 
 .soundcloud-track-copy p,
-.soundcloud-support-card p,
-.soundcloud-link p {
+.soundcloud-console-top p {
   margin: 0;
   color: var(--text-soft);
   line-height: 1.75;
