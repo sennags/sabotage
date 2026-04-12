@@ -117,7 +117,6 @@
   gap: 0.45rem;
 }
 
-.soundcloud-kicker,
 .soundcloud-console-label {
   display: inline-flex;
   width: fit-content;
@@ -128,12 +127,6 @@
   text-transform: uppercase;
 }
 
-.soundcloud-kicker {
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(255, 122, 26, 0.1);
-}
-
 .soundcloud-track-copy h2,
 .soundcloud-console-top h3 {
   margin: 0;
@@ -142,7 +135,7 @@
 .soundcloud-track-copy h2 {
   font-size: clamp(2.1rem, 4vw, 3.4rem);
   line-height: 0.92;
-  max-width: 10ch;
+  max-width: 12ch;
 }
 
 .soundcloud-quick-actions {
