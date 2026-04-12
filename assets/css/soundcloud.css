@@ -1,68 +1,258 @@
+.soundcloud-page {
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 26, 0.16), transparent 24%),
+    radial-gradient(circle at top right, rgba(255, 177, 79, 0.08), transparent 22%),
+    linear-gradient(180deg, #070605 0%, #0c0907 32%, #080706 100%);
+}
+
+.soundcloud-page::before {
+  opacity: 0.24;
+}
+
+.soundcloud-page .button {
+  min-height: 48px;
+  padding-inline: 1.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.soundcloud-page .button-primary {
+  color: #140c06;
+  box-shadow: 0 10px 24px rgba(255, 122, 26, 0.2);
+}
+
+.soundcloud-page .button-secondary {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-main);
+}
+
 .soundcloud-page main {
   width: min(var(--max-width), calc(100% - 2rem));
   margin: 0 auto 3rem;
 }
 
-.soundcloud-hero {
+.soundcloud-page .section {
   position: relative;
   overflow: hidden;
+  margin-top: 1rem;
+  padding: clamp(1.2rem, 2vw, 1.5rem);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.005)),
+    rgba(18, 14, 11, 0.94);
+  box-shadow: 0 12px 42px rgba(0, 0, 0, 0.3);
 }
 
-.soundcloud-hero-grid {
+.soundcloud-page .section::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(255, 122, 26, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.soundcloud-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 1.5rem;
-  align-items: center;
+  gap: 1.2rem;
+  padding: clamp(1.3rem, 2vw, 1.7rem);
 }
 
-.soundcloud-hero-copy h1 {
+.soundcloud-stage-copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1rem;
+  max-width: 780px;
+}
+
+.soundcloud-stage-copy h1 {
   margin: 0;
-  font-size: clamp(3rem, 7vw, 5.8rem);
+  max-width: 11ch;
+  font-size: clamp(3.3rem, 7vw, 6.1rem);
+  line-height: 0.9;
+}
+
+.soundcloud-stage-copy p:not(.eyebrow) {
+  margin: 0;
+  max-width: 46rem;
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.soundcloud-player-shell {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.4fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.soundcloud-now-playing,
+.soundcloud-console,
+.soundcloud-support-card,
+.soundcloud-link {
+  position: relative;
+  z-index: 1;
+  border-radius: 28px;
+}
+
+.soundcloud-now-playing,
+.soundcloud-support-card,
+.soundcloud-link {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(180deg, rgba(31, 24, 19, 0.98), rgba(18, 14, 11, 0.98));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+}
+
+.soundcloud-now-playing {
+  display: grid;
+  align-content: start;
+  gap: 1.2rem;
+  padding: 1.25rem;
+}
+
+.soundcloud-cover {
+  min-height: 280px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background:
+    linear-gradient(180deg, rgba(7, 6, 5, 0.24), rgba(7, 6, 5, 0.74)),
+    linear-gradient(135deg, rgba(255, 122, 26, 0.1), transparent 44%),
+    url("../../imgs/sbta-6.webp") center center / cover no-repeat;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.soundcloud-track-copy {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.soundcloud-kicker,
+.soundcloud-console-label,
+.soundcloud-support-card span,
+.soundcloud-link span {
+  display: inline-flex;
+  width: fit-content;
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.soundcloud-kicker {
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 122, 26, 0.1);
+}
+
+.soundcloud-track-copy h2,
+.soundcloud-console-top h3,
+.soundcloud-support-card h3,
+.soundcloud-link h3 {
+  margin: 0;
+}
+
+.soundcloud-track-copy h2 {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
   line-height: 0.92;
 }
 
-.soundcloud-hero-copy p {
-  margin: 1rem 0 0;
+.soundcloud-track-copy p,
+.soundcloud-support-card p,
+.soundcloud-link p {
+  margin: 0;
   color: var(--text-soft);
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
-.soundcloud-hero-art {
-  min-height: 320px;
-  border-radius: 24px;
+.soundcloud-meta-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.soundcloud-meta-list li {
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.soundcloud-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.soundcloud-console {
+  padding: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   background:
-    linear-gradient(180deg, rgba(7, 6, 5, 0.65), rgba(7, 6, 5, 0.12)),
-    url("../../imgs/sbta-6.webp") center center / cover no-repeat;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    linear-gradient(180deg, rgba(255, 122, 26, 0.08), rgba(255, 255, 255, 0.015)),
+    #17120f;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.44), 0 1px 0 rgba(255, 177, 79, 0.08) inset;
 }
 
-.soundcloud-player {
-  position: relative;
-  padding: 0.6rem;
-  border: 1px solid var(--line-strong);
-  border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 122, 26, 0.08), rgba(0, 0, 0, 0));
+.soundcloud-console-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0.2rem 1rem;
+}
+
+.soundcloud-console-top h3 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 0.98;
+}
+
+.soundcloud-console-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-soft);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .soundcloud-embed {
   display: block;
   width: 100%;
-  min-height: 500px;
+  min-height: 680px;
   border: 0;
   border-radius: 22px;
 }
 
 .soundcloud-fallback {
   position: absolute;
-  inset: 0.6rem;
+  inset: 0.9rem;
   display: grid;
   place-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   padding: 1.5rem;
   border-radius: 22px;
   text-align: center;
-  background: rgba(10, 8, 7, 0.92);
+  background: rgba(9, 8, 7, 0.96);
   color: var(--text-soft);
 }
 
@@ -70,84 +260,97 @@
   display: none;
 }
 
-.soundcloud-fallback h3 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.soundcloud-fallback p {
-  margin: 0;
-  line-height: 1.7;
-}
-
-.soundcloud-editorial {
+.soundcloud-support-grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.soundcloud-editorial p {
-  margin: 0;
-  color: var(--text-soft);
-  line-height: 1.85;
+.soundcloud-support-card,
+.soundcloud-link {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.2rem;
 }
 
 .soundcloud-links {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  grid-column: 1 / -1;
 }
 
 .soundcloud-link {
-  display: grid;
-  gap: 0.5rem;
-  padding: 1.2rem;
-  border-radius: 24px;
-  border: 1px solid var(--line);
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.02);
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-}
-
-.soundcloud-link span {
-  color: var(--accent-strong);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.soundcloud-link p {
-  margin: 0;
-  color: var(--text-soft);
-  line-height: 1.7;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
 .soundcloud-link:hover,
 .soundcloud-link:focus-visible {
-  border-color: var(--line-strong);
-  background: rgba(255, 255, 255, 0.04);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  border-color: rgba(255, 177, 79, 0.22);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    rgba(31, 24, 19, 0.98);
 }
 
 @media (max-width: 1100px) {
-  .soundcloud-hero-grid,
+  .soundcloud-player-shell,
+  .soundcloud-support-grid,
   .soundcloud-links {
     grid-template-columns: 1fr;
+  }
+
+  .soundcloud-cover {
+    min-height: 360px;
+  }
+
+  .soundcloud-embed {
+    min-height: 620px;
   }
 }
 
 @media (max-width: 860px) {
+  .soundcloud-page .site-nav a,
+  .soundcloud-page .button {
+    letter-spacing: 0.14em;
+  }
+
+  .soundcloud-page main {
+    width: calc(100% - 2rem);
+  }
+
+  .soundcloud-console-top {
+    flex-direction: column;
+    align-items: start;
+  }
+
   .soundcloud-embed {
-    min-height: 420px;
+    min-height: 520px;
   }
 }
 
 @media (max-width: 640px) {
-  .soundcloud-player,
-  .soundcloud-embed,
-  .soundcloud-hero-art,
+  .soundcloud-page .section,
+  .soundcloud-now-playing,
+  .soundcloud-console,
+  .soundcloud-support-card,
   .soundcloud-link,
-  .soundcloud-fallback {
+  .soundcloud-fallback,
+  .soundcloud-embed,
+  .soundcloud-cover {
     border-radius: 22px;
+  }
+
+  .soundcloud-stage-copy h1 {
+    font-size: clamp(2.9rem, 15vw, 4.8rem);
+  }
+
+  .soundcloud-cover {
+    min-height: 260px;
+  }
+
+  .soundcloud-embed {
+    min-height: 440px;
   }
 }
