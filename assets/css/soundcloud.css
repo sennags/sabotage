@@ -58,40 +58,15 @@
 
 .soundcloud-stage {
   display: grid;
-  gap: 1.2rem;
   padding: clamp(1.3rem, 2vw, 1.7rem);
-}
-
-.soundcloud-stage-copy {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 1rem;
-  max-width: 780px;
-}
-
-.soundcloud-stage-copy h1 {
-  margin: 0;
-  max-width: 11ch;
-  font-size: clamp(3.3rem, 7vw, 6.1rem);
-  line-height: 0.9;
-}
-
-.soundcloud-stage-copy p:not(.eyebrow) {
-  margin: 0;
-  max-width: 46rem;
-  color: var(--text-soft);
-  font-size: 1rem;
-  line-height: 1.75;
 }
 
 .soundcloud-player-shell {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(280px, 1.1fr);
-  gap: 1rem;
-  align-items: stretch;
+  grid-template-columns: minmax(280px, 640px);
+  justify-content: start;
 }
 
 .soundcloud-now-playing,
@@ -101,21 +76,7 @@
   border-radius: 28px;
 }
 
-.soundcloud-summary,
-.soundcloud-release-card {
-  position: relative;
-  z-index: 1;
-  border-radius: 28px;
-}
-
 .soundcloud-now-playing {
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: linear-gradient(180deg, rgba(31, 24, 19, 0.98), rgba(18, 14, 11, 0.98));
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
-}
-
-.soundcloud-summary,
-.soundcloud-release-card {
   border: 1px solid rgba(255, 255, 255, 0.05);
   background: linear-gradient(180deg, rgba(31, 24, 19, 0.98), rgba(18, 14, 11, 0.98));
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
@@ -126,36 +87,6 @@
   align-content: start;
   gap: 1.2rem;
   padding: 1.25rem;
-}
-
-.soundcloud-summary {
-  display: grid;
-  gap: 1rem;
-  padding: 1.25rem;
-}
-
-.soundcloud-release-card {
-  display: grid;
-  gap: 0.5rem;
-  padding: 1rem 1.1rem;
-}
-
-.soundcloud-release-card span {
-  color: var(--accent-strong);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.soundcloud-release-card h3,
-.soundcloud-release-card p {
-  margin: 0;
-}
-
-.soundcloud-release-card p {
-  color: var(--text-soft);
-  line-height: 1.7;
 }
 
 .soundcloud-cover {
@@ -171,7 +102,7 @@
 
 .soundcloud-track-copy {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.45rem;
 }
 
 .soundcloud-kicker,
@@ -199,13 +130,6 @@
 .soundcloud-track-copy h2 {
   font-size: clamp(2.1rem, 4vw, 3.4rem);
   line-height: 0.92;
-}
-
-.soundcloud-track-copy p,
-.soundcloud-console-top p {
-  margin: 0;
-  color: var(--text-soft);
-  line-height: 1.75;
 }
 
 .soundcloud-quick-actions {
